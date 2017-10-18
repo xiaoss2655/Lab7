@@ -84,10 +84,10 @@ public class Colosseum {
             System.out.print("Sorry. Hit points must be between 1 and 50: ");
             tempPokemon.hitPoints = sc.nextInt();
         }
-        System.out.print("Enter your attack level (1-50): ");
+        System.out.print("Enter your attack level (1-49): ");
         tempPokemon.attackLevel = sc.nextInt();
         while (tempPokemon.attackLevel < 1
-                || tempPokemon.attackLevel > 49) {
+                || tempPokemon.attackLevel > (a - 1)) {
             System.out.print("Sorry. Hit points must be between 1 and 50: ");
             tempPokemon.attackLevel = sc.nextInt();
         }
@@ -151,14 +151,14 @@ public class Colosseum {
         System.out.println("Player 1, build your Pokemon!");
         System.out.println("=================");
         firstPokemon = buildPokemon();
-        firstPokemon.name = "Chuchu";
+
 
         System.out.println("");
 
         System.out.println("Player 2, build your Pokemon!");
         System.out.println("==================");
         secondPokemon = buildPokemon();
-        secondPokemon.name = "Xyz";
+
     }
 
     /**
